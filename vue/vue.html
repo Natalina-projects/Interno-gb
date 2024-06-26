@@ -1,48 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Сортировка товаров</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div id="app">
-    <button v-on:click="reverseText">{{ buttonText }}</button>
-    <button v-on:click="addElement">{{ addElButtonText }}</button>
+    <button @click="sortIncreasing">{{ buttonIncreasingText }}</button>
+    <button @click="sortDecreasing">{{ buttonDecreasingText }}</button>
     <ul>
-      <li v-for="element in elements":key="element.id" v-on:click="removeElement(element.id)">{{ element.text }}</li>
-    </ul>  
+      <li v-for="product in products" :key="product.id"> {{ product.name }} - {{ product.price }} руб. </li>
+    </ul>
   </div>
- 
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>  
-<script>
-  new Vue({
-    el: '#app',
-    data: {
-      buttonText:'Перевернуть',
-      addElButtonText:'Добавить',
-      elements: [],
-      nextId: 1
 
-    },
-    methods: {
-      reverseText() {
-        this.buttonText = this.buttonText.split('').reverse().join('');
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        buttonIncreasingText: 'Сортировать по возрастанию',
+        buttonDecreasingText: 'Сортировать по убыванию',
+        products: [
+        { id: 1, name: 'Товар 1', price: 50 },
+        { id: 2, name: 'Товар 2', price: 250 },
+        { id: 3, name: 'Товар 3', price: 850 },
+        { id: 4, name: 'Товар 4', price: 500 }
+        ]
       },
-      addElement(){
-        this.elements.push({
-          id: this.nextId,
-          text: 'Новый элемент списка'
-        });
-        this.nextId++;
-      },
-      removeElement(id){
-        this.elements = this.elements.filter(element => element.id !== id);
+      methods: {
+        sortIncreasing() {
+          this.products.sort((a,b) => a.price - b.price);
+        },
+        sortDecreasing() {
+          this.products.sort((a,b) => b.price - a.price);
+        }
       }
-    }
-  }) 
+    })
 
-</script>
+  </script>
 </body>
+
 </html>

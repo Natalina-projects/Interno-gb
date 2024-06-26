@@ -17,6 +17,15 @@ body {
   padding-right: 15px;
 }
 
+.title {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+  color: #292F36;
+  font-size: 50px;
+  line-height: 1.25;
+  margin-top: 0;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -440,3 +449,134 @@ body {
   text-decoration: none;
   color: rgb(77, 80, 83);
 }
+
+.cover {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 356px;
+}
+
+.cover__img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
+}
+
+.cover__info {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 37px 37px 0 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 503px;
+  margin: 0 auto;
+  padding-top: 41px;
+  padding-bottom: 41px;
+}
+
+.cover__title {
+  margin-bottom: 0;
+}
+
+.breadcrumbs {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+}
+
+.breadcrumbs > li > a {
+  color: #4D5053;
+  text-decoration: none;
+}
+
+.breadcrumbs > li {
+  position: relative;
+}
+
+.breadcrumbs > li::after {
+  content: '/';
+  position: absolute;
+  right: -20px;
+}
+
+.breadcrumbs > li:last-child::after {
+  display: none;
+}
+
+.article-main h2 {
+  color: rgb(41, 47, 54);
+  font-family: DM Serif Display;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 2%;
+}
+
+.article-main__item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 22px;
+  gap: 65px;
+}
+
+.article-main__title {
+  color: rgb(41, 47, 54);
+  font-family: DM Serif Display;
+  font-size: 25px;
+  line-height: 125%;
+}
+
+.article-main__content p {
+  color: rgb(77, 80, 83);
+  font-size: 22px;
+  line-height: 150%;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 51px;
+}
+
+.pagination__item {
+  background-color: #fff;
+  width: 52px;
+  height: 52px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-sizing: border-box;
+  border: 1px solid rgb(205, 162, 116);
+  color: rgb(41, 47, 54);
+  font-family: Jost;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.pagination .active {
+  border: transparent;
+  background-color: #f4f0ec;
+}
+
+.pagination__item:hover {
+  background-color:#f4f0ec;
+}
+
+
+
+

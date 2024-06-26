@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css" />
-  <title>Главная</title>
+  <title>Блог</title>
 </head>
 <body>
   <header>
@@ -30,96 +30,35 @@
       </div>
     </div>
   </header>
-  <div class="main">
-    <div class="container">
-      <img class="main__img" src="img/banner.jpeg" alt="Баннер">
-      <div class="main__info">
-        <h1 class="main__title">Пусть ваш дом будет уникальным</h1>
-        <p class="main__text">Существует много вариаций Lorem Ipsum, которые можно использовать</p>
-        <button class="main__button" type="button">Начать
-          <span class="arrow-btn">
-              <svg  width="17.151123" height="16.005859" viewBox="0 0 17.1511 16.0059" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <desc>
-                  Created with Pixso.
-              </desc>
-              <defs/>
-              <path id="Vector" d="M1 7.93L14.73 7.8M9.62 1.41L16.15 7.93L9.49 14.59" stroke="#CDA274" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round"/>
-            </svg>
-          </span>
-        </button>
-      </div>
+  <div class="cover">
+    <img class="cover__img" src="img/cover.png" alt="интерьер">
+    <div class="cover__info">
+      <h2 class="title cover__title">Статьи & Новости</h2>
+      <ul class="breadcrumbs">
+        <li><a href="">Домой</a></li>
+        <li>Блог</li>
+      </ul>
     </div>
   </div>
-  <div class="catalog">
-    <div class="container">
-      <h2 class="catalog__title">Следите за нашими проектами</h2>
-      <p class="catalog__text">Хорошо известно, что читатель будет отвлекаться на читабельный контент страницы</p>
-      <div class="catalog__cards">
-        <div class="card">
-          <img src="img/product1.png" alt="Планировка">
-          <div class="card__description">
-            <div class="card__info">
-              <div class="info__title">Современная кухня</div>
-              <p class="info__text">Декор / Планировка</p>
-            </div>
-            <a href="#" class="arrow"></a> 
+  <div class="container">
+    <section class="article-main">
+      <h2>Последний пост</h2>
+      <article class="article-main__item">
+          <div class="article-main__thumb">
+            <img class="article-main__img" src="img/article-img.png" alt="kitchen">
           </div>
-        </div>
-        <div class="card">
-          <img src="img/product2.png" alt="Планировка">
-          <div class="card__description">
-            <div class="card__info">
-              <div class="info__title">Современная кухня</div>
-              <p class="info__text">Декор / Планировка</p>
+          <div class="article-main__content">
+            <h3 class="article-main__title">Low Cost Latest Invented Interior Designing Ideas</h3>
+              <p>С того времени этот, похожий на латинский, текст стал стандартом в печатной промышленности для примеров шрифтов и текстов. Перед появлением электронных издательств дизайнеры импровизировали в работе над макетами, изображая текст при помощи волнистых линий. С появлением самоклеющихся наклеек с напечатанным текстом «Lorem ipsum» появился более реалистичный способ обозначения расположения текста на странице.</p>
+            <div class="articles__info">
+              <span class="articles__date">26 December,2022</span>
+              <a href="#" class="arrow articles__link"></a>
             </div>
-            <a href="#" class="arrow"></a> 
           </div>
-        </div>
-        <div class="card">
-          <img src="img/product3.png" alt="Планировка">
-          <div class="card__description">
-            <div class="card__info">
-              <div class="info__title">Современная кухня</div>
-              <p class="info__text">Декор / Планировка</p>
-            </div>
-            <a href="#" class="arrow"></a> 
-          </div>
-        </div>
-        <div class="card">
-          <img src="img/product4.png" alt="Планировка">
-          <div class="card__description">
-            <div class="card__info">
-              <div class="info__title">Современная кухня</div>
-              <p class="info__text">Декор / Планировка</p>
-            </div>
-            <a href="#" class="arrow"></a> 
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="stat bg">
-    <div class="container">
-      <div class="stats">
-        <div class="stats__item">
-          <p><span>12</span>Лет опыта</p>
-        </div>
-        <div class="stats__item">
-          <p><span>85</span>Успешных проектов</p>
-        </div>
-        <div class="stats__item">
-          <p><span>15</span>Проектов в работе</p>
-        </div>
-        <div class="stats__item">
-          <p><span>95</span>Счастливых клиентов</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="article">
-    <div class="container">
-      <h2 class="title article__title">Статьи & Новости</h2>
-      <p class="article__text">Хорошо известно, что читатель будет отвлекаться на читабельный контент страницы</p>
+      </article>
+    </section>
+    <section class="article">
+      <h2>Статьи & Новости</h2>
       <div class="articles">
         <div class="articles__item">
           <div class="articles__thumb">
@@ -161,8 +100,53 @@
             <a href="#" class="arrow articles__link"></a>
           </div>
         </div>
+        <div class="articles__item">
+          <div class="articles__thumb">
+            <img src="img/articles-photo4.png" alt="interior" class="articles__img">
+            <span class="articles__tag">Дизайн кухни</span>
+          </div>
+          <h3 class="articles__title">
+            <a href="#">Создадим лучший макет перепланировки</a>
+          </h3>
+          <div class="articles__info">
+            <span class="articles__date">26 December,2022</span>
+            <a href="#" class="arrow articles__link"></a>
+          </div>
+        </div>
+        <div class="articles__item">
+          <div class="articles__thumb">
+            <img src="img/articles-photo5.png" alt="interior" class="articles__img">
+            <span class="articles__tag">Дизайн для жизни</span>
+          </div>
+          <h3 class="articles__title">
+            <a href="#">Лучшие интерьерные идеи по низкой цене</a>
+          </h3>
+          <div class="articles__info">
+            <span class="articles__date">22 December,2022</span>
+            <a href="#" class="arrow articles__link"></a>
+          </div>
+        </div>
+        <div class="articles__item">
+          <div class="articles__thumb">
+            <img src="img/articles-photo6.png" alt="interior" class="articles__img">
+            <span class="articles__tag">Дизайн Интерьера</span>
+          </div>
+          <h3 class="articles__title">
+            <a href="#">Лучшие интерьерные решения для офисов </a>
+          </h3>
+          <div class="articles__info">
+            <span class="articles__date">25 December,2022</span>
+            <a href="#" class="arrow articles__link"></a>
+          </div>
+        </div>
       </div>
-    </div>
+      <div class="pagination">
+        <a href="#" class="pagination__item active">01</a>
+        <a href="#" class="pagination__item ">02</a>
+        <a href="#" class="pagination__item ">03</a>
+        <a href="#" class="pagination__item arrow"></a>
+      </div>
+    </section>
   </div>
   <footer class="footer">
     <div class="container">
