@@ -514,6 +514,14 @@ body {
   display: none;
 }
 
+.article h2 {
+  color: rgb(41, 47, 54);
+  font-family: DM Serif Display;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 125%;
+}
+
 .article-main h2 {
   color: rgb(41, 47, 54);
   font-family: DM Serif Display;

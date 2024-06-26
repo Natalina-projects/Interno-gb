@@ -116,54 +116,30 @@
       </div>
     </div>
   </div>
-  <div class="article">
-    <div class="container">
-      <h2 class="title article__title">Статьи & Новости</h2>
-      <p class="article__text">Хорошо известно, что читатель будет отвлекаться на читабельный контент страницы</p>
-      <div class="articles">
-        <div class="articles__item">
-          <div class="articles__thumb">
-            <img src="img/articles-photo1.png" alt="interior" class="articles__img">
-            <span class="articles__tag">Дизайн кухни</span>
-          </div>
-          <h3 class="articles__title">
-            <a href="#">Создадим лучший макет перепланировки</a>
-          </h3>
-          <div class="articles__info">
-            <span class="articles__date">26 December,2022</span>
-            <a href="#" class="arrow articles__link"></a>
-          </div>
-
-        </div>
-        <div class="articles__item">
-          <div class="articles__thumb">
-            <img src="img/articles-photo2.png" alt="interior" class="articles__img">
-            <span class="articles__tag">Дизайн для жизни</span>
-          </div>
-          <h3 class="articles__title">
-            <a href="#">Лучшие интерьерные идеи по низкой цене</a>
-          </h3>
-          <div class="articles__info">
-            <span class="articles__date">22 December,2022</span>
-            <a href="#" class="arrow articles__link"></a>
-          </div>
-        </div>
-        <div class="articles__item">
-          <div class="articles__thumb">
-            <img src="img/articles-photo3.png" alt="interior" class="articles__img">
-            <span class="articles__tag">Дизайн Интерьера</span>
-          </div>
-          <h3 class="articles__title">
-            <a href="#">Лучшие интерьерные решения для офисов </a>
-          </h3>
-          <div class="articles__info">
-            <span class="articles__date">25 December,2022</span>
-            <a href="#" class="arrow articles__link"></a>
+  <div id="app">
+    <div class="article">
+      <div class="container">
+        <h2 class="title article__title">Статьи & Новости</h2>
+        <p class="article__text">Хорошо известно, что читатель будет отвлекаться на читабельный контент страницы</p>
+        <div class="articles">
+          <div class="articles__item" v-for="article in articles" :key="article.id">
+            <div class="articles__thumb">
+              <img :src="article.image"  alt="article.alt" class="articles__img">
+              <span class="articles__tag">{{ article.category }}</span>
+            </div>
+            <h3 class="articles__title">
+              <a :href="article.link">{{ article.title }}/</a>
+            </h3>
+            <div class="articles__info">
+              <span class="articles__date">{{ article.date }}</span>
+              <a :href="article.link" class="arrow articles__link"></a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
   <footer class="footer">
     <div class="container">
       <div class="footer__social">
@@ -211,6 +187,7 @@
       </div>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>
